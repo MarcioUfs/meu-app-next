@@ -1,5 +1,12 @@
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+
 export default function Home() {
+    const router = useRouter();
+
+  const handleLogin = async () => {
+    router.push("/login");
+  };
    return (
     <div className="flex flex-col min-h-screen">
       {/* <div className="justify-center items-center flex flex-col min-h-screen"> */}
@@ -16,7 +23,7 @@ export default function Home() {
         />
         <button
           className="bg-blue-500 text-white rounded hover:bg-blue-600 w-16 md:w-22 lg:w-48 text-2xl"
-          // onClick={handleLogin}
+          onClick={handleLogin}
         >
           Login
         </button>
