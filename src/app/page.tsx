@@ -4,12 +4,12 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Home() {
-    const router = useRouter();
+  const router = useRouter();
 
   const handleLogin = async () => {
     router.push("/login");
   };
-   return (
+  return (
     <div className="flex flex-col min-h-screen">
       {/* <div className="justify-center items-center flex flex-col min-h-screen"> */}
       {/* <header className="justify-around items-center flex p-3 bg-amber-200 w-svw"> */}
@@ -30,11 +30,12 @@ export default function Home() {
           Login
         </button>
       </header>
-      <h1 className="text-center text-gray-700 md:text-2xl lg:text-6xl ">
-        Texto h1
+      <h1 className="text-center text-gray-200 md:text-2xl lg:text-6xl ">
+        Aracaju uma nova cidade
       </h1>
-      <main className="flex flex-col px-3 md:grid md:grid-cols-2 md:gap-5 md:p-5 lg:grid lg:grid-cols-3 lg:gap-5 lg:p-5">
-        <p className="text-justify ">
+      <main className="flex flex-col px-5">
+        {/* <main className="flex flex-col px-3 md:grid md:grid-cols-2 md:gap-5 md:p-5 lg:grid lg:grid-cols-3 lg:gap-5 lg:p-5"> */}
+        {/* <p className="text-justify ">
           Uma equipe internacional de cientistas anunciou a descoberta de três
           planetas do tamanho da Terra no sistema estelar binário TOI-2267, que
           fica a cerca de 190 anos-luz de distância Impressão artística de
@@ -210,7 +211,382 @@ export default function Home() {
           como planetas podem se formar em ambientes instáveis e oferece uma
           chance única de estudar a formação de planetas rochosos, com ajuda de
           telescópios espaciais e terrestres.
-        </p>
+        </p> */}
+
+        <section id="introducao"></section>
+
+        <section id="historia">
+          <h2 className="text-center text-4xl">História de Aracaju</h2>
+          <p className="text-justify">
+            Aracaju, cujo nome tem origem na língua tupi e significa
+            &quot;cajueiro de araras&quot;, possui uma história singular por ser
+            uma das poucas capitais brasileiras a ser <strong>planejada</strong>
+            . Sua fundação e elevação à categoria de capital ocorreram em{" "}
+            <strong>17 de março de 1855</strong>, substituindo a antiga capital,
+            São Cristóvão.
+          </p>
+
+          <h3 className="text-center text-3xl">A Capital Planejada</h3>
+          <p className="text-justify">
+            O local onde a cidade se desenvolveu era historicamente a residência
+            oficial do cacique Serigy. A mudança de capital foi motivada por
+            questões políticas e econômicas, visando facilitar o escoamento da
+            produção açucareira através do Porto de Aracaju. O projeto
+            urbanístico de Aracaju, concebido pelo engenheiro{" "}
+            <strong>Sebastião Basílio Pirro</strong>, era inovador para a época.
+            Ele implementou um <strong>traçado geométrico e retilíneo</strong>,
+            semelhante a um tabuleiro de xadrez, permitindo uma expansão mais
+            ordenada.
+          </p>
+          <p className="text-justify">
+            A nova capital enfrentou adversidades nos primeiros anos, mas se
+            firmou em 1865. O desenvolvimento industrial teve início com a
+            primeira fábrica de tecidos em 1884. No início do século XX, a
+            cidade demonstrou pioneirismo com a inauguração de serviços de água
+            encanada (1908), esgotos sanitários (1914) e a chegada da estrada de
+            ferro.
+          </p>
+        </section>
+
+        <section id="geografia">
+          <h2 className="text-center text-3xl">
+            Dados Geográficos e Ambientais
+          </h2>
+          <p className="text-justify">
+            Aracaju está localizada no litoral leste do Nordeste do Brasil,
+            sendo banhada pelo Oceano Atlântico.
+          </p>
+
+          <h3 className="text-center text-3xl">Localização e Limites</h3>
+          <ul>
+            <li>
+              <strong>Unidade Federativa:</strong> Sergipe (SE)
+            </li>
+            <li>
+              <strong>Região Geográfica:</strong> Nordeste
+            </li>
+            <li>
+              <strong>Área Total:</strong> Aproximadamente 182,163 km² (IBGE
+              2022)
+            </li>
+            <li>
+              <strong>Altitude Média:</strong> 4 metros
+            </li>
+            <li>
+              <strong>Fuso Horário:</strong> UTC−3 (Hora de Brasília)
+            </li>
+            <li>
+              <strong>Municípios Limítrofes:</strong> Barra dos Coqueiros,
+              Itaporanga d&apos; Ajuda, Nossa Senhora do Socorro, Santo Amaro
+              das Brotas e São Cristóvão.
+            </li>
+          </ul>
+
+          <h3 className="text-center text-3xl">Hidrografia e Relevo</h3>
+          <p className="text-justify">
+            A cidade é cortada por importantes rios: o{" "}
+            <strong>Rio Sergipe</strong>, principal elemento geográfico que
+            separa Aracaju de Barra dos Coqueiros, e o{" "}
+            <strong>Rio Vaza-Barris</strong>, que banha a porção sul da cidade.
+            O relevo é caracterizado por <strong>planícies</strong> e{" "}
+            <strong>tabuleiros litorâneos</strong>, o que explica sua baixa
+            altitude.
+          </p>
+
+          <h3 className="text-center text-3xl">Clima e Vegetação</h3>
+          <ul>
+            <li>
+              <strong>Clima:</strong> Tropical Litorâneo, classificado como
+              Tropical Semiúmido. Caracteriza-se por altas temperaturas e alta
+              umidade.
+            </li>
+            <li>
+              <strong>Temperatura Média Anual:</strong> Cerca de 26 graus
+              Celsius.
+            </li>
+            <li>
+              <strong>Período Chuvoso:</strong> Geralmente de março a agosto.
+            </li>
+            <li>
+              <strong>Bioma:</strong> Integra o bioma Mata Atlântica. A
+              vegetação inclui Floresta Tropical, Manguezais (nos estuários) e
+              Restinga (na área litorânea).
+            </li>
+          </ul>
+        </section>
+
+        <section id="sociais">
+          <h2 className="text-center text-3xl">
+            Demografia e Aspectos Sociais
+          </h2>
+          <p className="text-justify">
+            Aracaju é a cidade mais populosa de Sergipe.
+          </p>
+          <ul>
+            <li>
+              <strong>População Total (IBGE 2022):</strong> 602.757 habitantes.
+            </li>
+            <li>
+              <strong>Densidade Demográfica (IBGE 2022):</strong> 3.308,89
+              habitantes por km².
+            </li>
+            <li>
+              <strong>Taxa de Urbanização:</strong> 100%.
+            </li>
+            <li>
+              <strong>Gentílico:</strong> Aracajuano.
+            </li>
+            <li>
+              <strong>Composição Étnica:</strong> A maioria da população se
+              autodeclara parda (aproximadamente 55,4%), seguida por brancos
+              (cerca de 29,7%) e pretos (14,4%).
+            </li>
+          </ul>
+
+          <h3 className="text-center text-3xl">
+            Índice de Desenvolvimento Humano (IDH)
+          </h3>
+          <p className="text-justify">
+            Aracaju historicamente se destaca como uma das capitais com melhor
+            qualidade de vida na Região Nordeste.
+          </p>
+          <ul>
+            <li>
+              <strong>IDH (2010):</strong> 0,770 (Considerado Alto).
+            </li>
+          </ul>
+          <h4>Componentes do IDH (2010):</h4>
+          <ul>
+            <li>
+              <strong>IDHM - Longevidade:</strong> 0,823
+            </li>
+            <li>
+              <strong>IDHM - Educação:</strong> 0,708
+            </li>
+            <li>
+              <strong>IDHM - Renda:</strong> 0,784
+            </li>
+          </ul>
+        </section>
+
+        <section id="politica-economia">
+          <h2 className="text-center text-4xl">
+            Estrutura Política e Economia
+          </h2>
+
+          <h3 className="text-center text-3xl">Política e Administração</h3>
+          <p className="text-justify">
+            Como capital do estado, Aracaju concentra as sedes dos poderes
+            Executivo (Prefeitura), Legislativo (Câmara Municipal) e Judiciário
+            estaduais. Aracaju é o núcleo da{" "}
+            <strong>Região Metropolitana de Aracaju</strong>, que inclui os
+            municípios de Barra dos Coqueiros, Nossa Senhora do Socorro e São
+            Cristóvão.
+          </p>
+
+          <h3 className="text-center text-3xl">Economia</h3>
+          <p>A economia de Aracaju é a mais importante do estado de Sergipe.</p>
+          <ul>
+            <li>
+              <strong>PIB (2021):</strong> R$ 18,4 bilhões (aproximadamente
+              35,5% do PIB sergipano).
+            </li>
+            <li>
+              <strong>PIB per capita (2021):</strong> R$ 27.364,4.
+            </li>
+            <li>
+              <strong>Setor Predominante:</strong> O{" "}
+              <strong>Setor Terciário</strong> (Serviços e Comércio) é o líder
+              absoluto da economia, com grande destaque para a atividade
+              turística.
+            </li>
+          </ul>
+        </section>
+
+        <section id="turismo-cultura">
+          <h2 className="text-center text-4xl">Turismo e Cultura</h2>
+          <p className="text-justify">
+            O turismo é um pilar econômico de Aracaju, aproveitando a beleza de
+            seu litoral e sua riqueza cultural. ## Turismo em Aracaju: A Orla
+            Mais Estruturada do Nordeste Aracaju, a capital de Sergipe,
+            destaca-se no cenário turístico nordestino por sua organização
+            urbana planejada e pela excelência de sua infraestrutura litorânea.
+            O turismo na cidade é fortemente ancorado no sol, mar e na rica
+            cultura sergipana, oferecendo uma experiência agradável e acessível
+            aos visitantes. O principal cartão-postal da cidade é a **Orla de
+            Atalaia**. Considerada por muitos a mais bem estruturada do Nordeste
+            brasileiro, a orla estende-se por vários quilômetros, oferecendo
+            lazer completo. Ela conta com calçadões amplos, ciclovias extensas,
+            quadras poliesportivas, lagos artificiais com pedalinhos, e o
+            **Monumento aos Formadores de Sergipe** (os famosos Arcos de
+            Atalaia). A segurança e a limpeza constante tornam o local ideal
+            para passeios a qualquer hora do dia. Integrada à orla está a
+            **Passarela do Caranguejo**, um polo gastronômico vibrante onde o
+            crustáceo, preparado de diversas formas, é a estrela principal. A
+            passarela é conhecida pela sua vida noturna agitada, com bares e
+            restaurantes que servem pratos regionais e internacionais, sempre
+            embalados por música ao vivo, frequentemente o forró, ritmo que
+            domina o estado. Além da praia principal, o turismo em Aracaju se
+            estende aos seus rios. Passeios de catamarã são populares no **Rio
+            Sergipe** e no **Rio Vaza-Barris**, levando os visitantes a locais
+            de beleza natural como a **Croa do Goré** e a **Ilha dos
+            Namorados**, bancos de areia que emergem nas águas tranquilas dos
+            estuários. O centro da cidade oferece um mergulho na cultura e
+            história local, com o complexo de **Mercados Municipais** (Antônio
+            Franco e Thales Ferraz) sendo um ponto de parada obrigatório. Ali, é
+            possível encontrar artesanato, rendas, cerâmicas e experimentar a
+            culinária sergipana autêntica, como a moqueca e a carne de sol, além
+            de provar frutas típicas e doces regionais. O **Centro Histórico**
+            planejado, com sua arquitetura reta e organizada, abriga importantes
+            edifícios como a Catedral Metropolitana e o Palácio Museu Olímpio
+            Campos. O calendário de eventos é outro atrativo. Sergipe é
+            conhecido como o &quot;País do Forró&quot;, e as festividades
+            juninas em Aracaju, que se estendem por todo o mês de junho, atraem
+            turistas de todo o país com grandes shows, quadrilhas e farta
+            culinária típica. Aracaju se consolidou como um destino que combina
+            a tranquilidade de uma capital menor com a conveniência de uma
+            grande cidade turística, sendo a porta de entrada para a descoberta
+            das belezas naturais e tradições do interior de Sergipe.
+          </p>
+
+          <h3 className="text-center text-3xl">
+            Principais Atrações Turísticas
+          </h3>
+          <ul>
+            <li>
+              <strong>Orla de Atalaia:</strong>A Orla de Atalaia é o ponto
+              turístico mais famoso e emblemático de Aracaju. Sua principal
+              característica é a estrutura planejada e moderna, sendo
+              frequentemente citada como uma das orlas urbanas mais completas e
+              seguras do Brasil.Considerada uma das mais bem estruturadas do
+              Brasil, com calçadões, ciclovias e o Monumento aos Formadores de
+              Sergipe.
+              <ul>
+                <li>
+                  Infraestrutura e Lazer: A orla estende-se por mais de 6
+                  quilômetros e oferece uma vasta gama de opções de lazer
+                  gratuito. Inclui amplos calçadões, extensas ciclovias e pistas
+                  de caminhada, quadras de vôlei de praia e de tênis, além de
+                  chuveiros e postos de salvamento. É um local perfeito tanto
+                  para a prática esportiva diurna quanto para o lazer noturno.
+                </li>
+                <li>
+                  Complexos de Lazer: A orla abriga diversos complexos, como o
+                  Centro de Arte e Cultura de Sergipe e o Oceanário de Aracaju
+                  (projeto do Tamar), que é um dos maiores tanques marinhos do
+                  Nordeste.
+                </li>
+                <li>
+                  Monumento aos Formadores de Sergipe: Localizado no início da
+                  orla, este é o famoso conjunto de arcos, um símbolo
+                  arquitetônico da cidade que rende belas fotos e marca o ponto
+                  de entrada da área mais turística.
+                </li>
+                <li>
+                  Lagos da Orla: Possui lagos artificiais onde é possível alugar
+                  pedalinhos. Próximo a eles, há o Parque da Cidade (não
+                  confundir com o Parque da Cidade do morro), uma área verde com
+                  parquinho infantil e áreas de convivência.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Passarela do Caranguejo:</strong> Polo gastronômico famoso
+              por seus bares e restaurantes. Passarela do Caranguejo: O Coração
+              Gastronômico
+              <ol>
+                <li>
+                  Localizada dentro do complexo da Orla de Atalaia, a Passarela
+                  do Caranguejo é o principal polo da vida noturna e da
+                  gastronomia de Aracaju.
+                </li>
+                <li>
+                  Foco Gastronômico: Seu nome deriva do prato que é a estrela do
+                  local: o caranguejo, servido geralmente cozido e temperado,
+                  acompanhado de uma tigela de pirão e molho de pimenta.
+                </li>
+                <li>
+                  Diversidade: Além do caranguejo, a Passarela é repleta de
+                  restaurantes, bares e quiosques que oferecem o melhor da
+                  culinária sergipana, incluindo moquecas de frutos do mar,
+                  peixes frescos e a carne de sol, bem como cozinha
+                  contemporânea.
+                </li>
+                <li>
+                  Vida Noturna: É o centro de entretenimento noturno, com muitos
+                  estabelecimentos oferecendo música ao vivo (predominantemente
+                  forró e MPB) e mesas ao ar livre, criando um ambiente festivo
+                  e acolhedor.
+                </li>
+                <li>
+                  Símbolo: A passarela é facilmente identificável por abrigar
+                  uma escultura gigante de um caranguejo, um ponto popular para
+                  fotos dos turistas.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <strong>
+                Mercado Municipal (Antônio Franco e Thales Ferraz):
+              </strong>{" "}
+              Centro cultural e comercial para artesanato e culinária local.
+              Mercado Municipal (Antônio Franco e Thales Ferraz): Imersão na Cultura Local
+              <ol>
+                <li>O complexo de Mercados Centrais de Aracaju é o verdadeiro coração comercial e cultural da cidade, essencial para quem busca uma experiência autêntica.</li>
+                <li>Estrutura Tripla: O complexo é composto por três grandes mercados interligados ou próximos: Antônio Franco, Thales Ferraz e Albano Franco.</li>
+                <li>Mercado Thales Ferraz (Artesanato): É o principal foco do turismo de compras. Ali, encontram-se o riquíssimo artesanato sergipano – como cerâmicas, rendas, bordados, produtos de couro, redes e peças regionais –, além de lembrancinhas.</li>
+                <li>Mercado Antônio Franco (Produtos Secos e Bares): Este mercado histórico (com estruturas de ferro do início do século XX) é famoso pelas lojas de ervas medicinais, temperos, cereais, e pela concentração de bares populares que servem a culinária do dia a dia.</li>
+                <li>Culinária Típica: Nos mercados, o turista pode saborear o autêntico cuscuz, tapioca, bolos regionais e caldos, comendo lado a lado com os moradores locais. É o melhor lugar para comprar especiarias e doces caseiros.</li>
+              </ol>
+            </li>
+            <li>
+              <strong>Rios Sergipe e Vaza-Barris:</strong> Oferecem passeios de
+              catamarã. Rios Sergipe e Vaza-Barris: Roteiros Fluviais
+              <ol>
+                <li>Os estuários dos dois principais rios de Aracaju oferecem passeios náuticos relaxantes e acesso a belezas naturais únicas.</li>
+                <li>Passeios de Catamarã: A principal forma de explorar os rios é através de confortáveis catamarãs que partem principalmente do píer da Orla do Bairro Industrial (Rio Sergipe) ou de pontos próximos à Orla do Vaza-Barris.</li>
+                <li>Rio Vaza-Barris - Rota da Croa do Goré: Este é o passeio fluvial mais famoso. O catamarã navega pelo rio Vaza-Barris até a Croa do Goré, um banco de areia que se forma durante a maré baixa. A croa é um &quot;bar flutuante&quot; no meio do rio, ideal para banhos em águas mornas e tranquilas. O passeio geralmente inclui uma parada na Ilha dos Namorados, outra formação de areia com estrutura de apoio.</li>
+                <li>Rio Sergipe: Os passeios por este rio geralmente focam na travessia para a vizinha Barra dos Coqueiros ou em roteiros que exploram a beleza dos manguezais, mostrando a rica biodiversidade da foz do rio.</li>
+              </ol>
+            </li>
+          </ul>
+
+          <h3 className="text-center text-3xl">Cultura e Festividades</h3>
+          <p className="text-justify">
+            A cultura aracajuana é marcada pelas tradições nordestinas.
+          </p>
+          <ul>
+            <li>
+              <strong>Festejos Juninos:</strong> Grandes eventos de forró e
+              quadrilhas durante o mês de junho (São João).
+            </li>
+            <li>
+              <strong>Artesanato:</strong> Destaques para cerâmica e bordado.
+            </li>
+            <li>
+              <strong>Culinária:</strong> Rica em frutos do mar (caranguejo,
+              peixes) e pratos típicos como moqueca e carne de sol.
+            </li>
+          </ul>
+        </section>
+
+        <section id="resumo">
+          <h2 className="text-center text-4xl">Resumo de Dados Chave</h2>
+          <ul>
+            <li>
+              <strong>População Total (IBGE 2022):</strong> 602.757 habitantes
+            </li>
+            <li>
+              <strong>Área Total (IBGE 2022):</strong> 182,163 km²
+            </li>
+            <li>
+              <strong>IDH (PNUD 2010):</strong> 0,770 (Alto)
+            </li>
+            <li>
+              <strong>PIB (2021):</strong> R$ 18,4 bilhões
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
   );
