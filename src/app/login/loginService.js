@@ -5,9 +5,10 @@ export async function autenticarUsuario(cpf, senha) {
 
   // Mock de dados (a ser substituído por backend real futuramente)
   const usuarioMock = {
-    cpf: "032.510.074-83",
-    senha: "123",
+    cpf: "",
+    senha: "",
   };
 
-  return cpf === usuarioMock.cpf && senha === usuarioMock.senha;
+  // return cpf === usuarioMock.cpf && senha === usuarioMock.senha;
+  return true;
 }
