@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MeuApp",
-  description: "App teste para deploy na Vercel",
+  title: "Aracaju",
+  description: "Aracaju",
 };
 
 export default function RootLayout({
