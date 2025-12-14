@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-export default function Buracos() {
+export default function CadastroOcorrencia() {
   const [descricao, setDescricao] = useState("");
   const [fotos, setFotos] = useState([]);
   const [video, setVideo] = useState(null);
