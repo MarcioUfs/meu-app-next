@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 export default function Home() {
    return (
     <div className="flex flex-col min-h-screen">
@@ -6,14 +6,14 @@ export default function Home() {
       {/* <header className="justify-around items-center flex p-3 bg-amber-200 w-svw"> */}
       {/* <header className="flex justify-around items-center p-3 bg-amber-200 w-full"> */}
       <header className="flex justify-around items-center p-3 w-full">
-        {/* <Image
+        <Image
           // className="px-auto"
           src="/image/p.png"
           alt="pref.js logo"
           width={150}
           height={38}
           priority
-        /> */}
+        />
         <button
           className="bg-blue-500 text-white rounded hover:bg-blue-600 w-16 md:w-22 lg:w-48 text-2xl"
           // onClick={handleLogin}
