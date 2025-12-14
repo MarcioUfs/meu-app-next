@@ -37,6 +37,26 @@ export default function Home() {
             Iluminação
           </button>
         </Link>
+        <Link href="/cadastroOcorrencia">
+          <button className="bg-blue-500 text-white p-2 rounded mt-4 w-64 hover:bg-blue-600 hover:cursor-pointer">
+            Animais
+          </button>
+        </Link>
+        <Link href="/cadastroOcorrencia">
+          <button className="bg-blue-500 text-white p-2 rounded mt-4 w-64 hover:bg-blue-600 hover:cursor-pointer">
+            Poda de Árvores
+          </button>
+        </Link>
+        <Link href="/cadastroOcorrencia">
+          <button className="bg-blue-500 text-white p-2 rounded mt-4 w-64 hover:bg-blue-600 hover:cursor-pointer">
+            Placas de Trânsito
+          </button>
+        </Link>
+        <Link href="/cadastroOcorrencia">
+          <button className="bg-blue-500 text-white p-2 rounded mt-4 w-64 hover:bg-blue-600 hover:cursor-pointer">
+            Elogio
+          </button>
+        </Link>
       </div>
     </div>
   );
