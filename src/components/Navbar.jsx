@@ -12,8 +12,9 @@ function Navbar() {
        {/* Botão Hambúrguer */}
       {/* <ul className={`${styles.navList} ${isOpen ? styles.open : ''}`}> */}
       <ul className={`${styles.navList}`}>
-        <li><Link href="/" className={styles.navLink}>Início</Link></li>
-        <li><Link href="/ocorrencia" className={styles.navLink}>Ocorrência</Link></li>
+        <li><Link href="/" className={styles.navLink}>Início |</Link></li>
+        <li><Link href="/ocorrencia" className={styles.navLink}>Cadastrar |</Link></li>
+        <li><Link href="/verOcorrencia" className={styles.navLink}>Ver Ocorrências |</Link></li>
         <li><Link href="/servicos" className={styles.navLink}>Sair</Link></li>
       </ul>
     </nav>
