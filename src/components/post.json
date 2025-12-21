@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Understanding React Hooks",
+        "author": "Jane Doe",
+        "date": "2024-06-15",
+        "tags": ["react", "javascript", "hooks", "web development"],
+        "content": "React Hooks are functions that let you use state and other React features without writing a class. They were introduced in React 16.8 and have become a fundamental part of modern React development..."
+    },
+    {
+        "id": 2,
+        "title": "Introduction to TypeScript",
+        "author": "Alice Johnson",  
+        "date": "2024-06-10",
+        "tags": ["typescript", "javascript", "programming"],
+        "content": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale..."
+    },
+    {
+        "id": 3,
+        "title": "A Guide to CSS Flexbox",
+        "author": "John Smith",
+        "date": "2024-05-20",
+        "tags": ["css", "flexbox", "web design", "frontend"],
+        "content": "CSS Flexbox is a layout model that allows you to design flexible and efficient layouts. It provides an easy way to align and distribute space among items in a container, even when their size is unknown..."
+    },
+    {
+        "id": 5,
+        "title": "Building RESTful APIs with Node.js",
+        "author": "Michael Brown",
+        "date": "2024-05-30",
+        "tags": ["node.js", "api", "rest", "backend"],
+        "content": "Node.js is a powerful platform for building RESTful APIs. In this article, we will explore how to set up a simple RESTful API using Express.js, a popular web framework for Node.js..."
+    }
+]
