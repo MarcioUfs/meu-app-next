@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Header from "../components/header/Header";
 
 export default function Home() {
   const router = useRouter();
@@ -11,6 +12,7 @@ export default function Home() {
   };
   return (
     <div className="flex flex-col min-h-screen">
+      <Header />
       {/* <div className="justify-center items-center flex flex-col min-h-screen"> */}
       {/* <header className="justify-around items-center flex p-3 bg-amber-200 w-svw"> */}
       {/* <header className="flex justify-around items-center p-3 bg-amber-200 w-full"> */}
