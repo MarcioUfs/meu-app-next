@@ -15,7 +15,7 @@ function Navbar() {
         <li><Link href="/" className={styles.navLink}>Início |</Link></li>
         <li><Link href="/ocorrencia" className={styles.navLink}>Cadastrar |</Link></li>
         <li><Link href="/verOcorrencia" className={styles.navLink}>Ver Ocorrências |</Link></li>
-        <li><Link href="/servicos" className={styles.navLink}>Sair</Link></li>
+        <li><Link href="/" className={styles.navLink}>Sair</Link></li>
       </ul>
     </nav>
   );
