@@ -1,41 +1,132 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Header from "../components/header/Header";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleLogin = async () => {
-    router.push("/login");
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="bg-white text-black flex flex-col min-h-screen">
-      <Header />
-      {/* <div className="justify-center items-center flex flex-col min-h-screen"> */}
-      {/* <header className="justify-around items-center flex p-3 bg-amber-200 w-svw"> */}
-      {/* <header className="flex justify-around items-center p-3 bg-amber-200 w-full"> */}
-      <header className="flex justify-around items-center p-3 w-full">
-        <Image
-          // className="px-auto"
-          src="/image/p.png"
-          alt="pref.js logo"
-          width={150}
-          height={38}
-          priority
-        />
-        <button
-          // className="bg-blue-500 text-white rounded hover:bg-blue-600 md:w-22 lg:w-48 text-2xl"
+      <header className="sticky top-0 z-50 bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="h-10 w-10 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xl">
+                  <Image
+                    src="/image/Brasao_de_Aracaju.png"
+                    alt="Brasão"
+                    className="h-8 w-8"
+                    width={32}
+                    height={32}
+                  />
+                </span>
+              </div>
+              <div className="md:hidden">
+                <span className="text-xl font-semibold text-gray-800">
+                  <Image
+                    src="/image/Logo_prefaju.png"
+                    alt="Brasão"
+                    className="mx-6"
+                    width={150}
+                    height={38}
+                  />
+                </span>
+              </div>
+            </div>
 
-          onClick={handleLogin}
+            {/* Navigation Links - Desktop */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <span className="text-xl font-semibold text-gray-800">
+                  <Image
+                    src="/image/Logo_prefaju.png"
+                    alt="Brasão"
+                    width={150}
+                    height={38}
+                  />
+                </span>
+              </Link>
+            </nav>
+
+            {/* CTA Buttons - Desktop */}
+            <div className="hidden md:flex items-center space-x-4">
+              <Link href="/login">
+                <button className="px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                  Login
+                </button>
+              </Link>
+              <Link href="/signup">
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Abrir menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden bg-white border-t ${menuOpen ? "block" : "hidden"
+            }`}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
+          <div className="container mx-auto px-4 py-2 flex flex-col space-y-2">
+            {/* <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-gray-600 hover:text-blue-600">
+              Home
+            </Link>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-gray-600 hover:text-blue-600">
+              Sobre
+            </Link>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-gray-600 hover:text-blue-600">
+              Services
+            </Link>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-gray-600 hover:text-blue-600">
+              Blog
+            </Link>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-gray-600 hover:text-blue-600">
+              Contact
+            </Link> */}
 
-        </button>
-      </header>
+            <div className="flex flex-col space-y-2 pt-2 ">
+              {/* <div className="flex flex-col space-y-2 pt-2 border-t"> */}
+              <Link href="/login">
+                <button className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                  {/* <button className="w-full py-2 text-gray-600 hover:text-blue-600 text-left"> */}
+                  Login
+                </button>
+              </Link>
+              <Link href="/signup">
+                <button className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </header >
       <h1 className="text-center md:text-2xl lg:text-6xl ">
         Aracaju uma nova cidade
       </h1>
@@ -594,6 +685,6 @@ export default function Home() {
           </ul>
         </section>
       </main>
-    </div>
+    </div >
   );
 }
