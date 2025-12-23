@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,10 +13,26 @@ function Header() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center space-x-2">
-                        <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center">
-                            <span className="text-white font-bold text-xl">L</span>
+                        <div className="h-10 w-10 rounded-full flex items-center justify-center">
+                            <span className="text-white font-bold text-xl">
+                                <Image
+                                    src="/image/Brasao_de_Aracaju.png"
+                                    alt="Brasão"
+                                    className="h-8 w-8"
+                                    width={32}
+                                    height={32}
+                                />
+                            </span>
                         </div>
-                        <span className="text-xl font-semibold text-gray-800">Logo</span>
+                        <span className="text-xl font-semibold text-gray-800">
+                            <Image
+                                    src="/image/Logo_prefaju.png"
+                                    alt="Brasão"
+                                    // className="h-8 w-8"
+                                    width={150}
+                                    height={38}
+                                />
+                        </span>
                     </div>
 
                     {/* Navigation Links - Desktop */}
@@ -24,14 +41,14 @@ function Header() {
                             Home
                         </Link>
                         <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-                            Sobre
+                            Sobre-nós
                         </Link>
                         <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-                            Services
+                            Serviços
                         </Link>
-                        <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                        {/* <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
                             Blog
-                        </Link>
+                        </Link> */}
                         <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
                             Contact
                         </Link>
@@ -73,9 +90,8 @@ function Header() {
 
             {/* Mobile Menu */}
             <div
-                className={`md:hidden bg-white border-t ${
-                    menuOpen ? "block" : "hidden"
-                }`}
+                className={`md:hidden bg-white border-t ${menuOpen ? "block" : "hidden"
+                    }`}
             >
                 <div className="container mx-auto px-4 py-2 flex flex-col space-y-2">
                     <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-gray-600 hover:text-blue-600">
