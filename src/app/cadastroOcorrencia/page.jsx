@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/(navBar)/Navbar";
 
 export default function CadastroOcorrencia() {
   const [descricao, setDescricao] = useState("");
@@ -94,7 +94,7 @@ export default function CadastroOcorrencia() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              class="size-6 py-auto mx-auto"
+              className="size-6 py-auto mx-auto"
             >
               <path
                 strokeLinecap="round"
