@@ -1,23 +1,12 @@
 "use Client";
+
 import Link from "next/link";
-import Navbar from "../../components/(navBar)/Navbar";
+import Header from "../../components/header/Header";
 
 export default function Ocorrencia() {
   return (
     <div>
-      <Navbar />
-      {/* <div className="justify-center items-baseline-last flex flex-row">
-        <Link href="/login">
-          <button className="bg-orange-500 text-white p-2 rounded mt-4 mr-3 w-24 hover:bg-orange-700 hover:cursor-pointer">
-            Voltar
-          </button>
-        </Link>
-        <Link href="/">
-          <button className="bg-orange-500 text-white p-2 rounded mt-4 mr-3 w-24 hover:bg-orange-700 hover:cursor-pointer">
-            Sair
-          </button>
-        </Link>
-      </div> */}
+      <Header />
       <div className="justify-center items-center flex flex-col min-h-screen">
         <h1 className="text-2xl m-2">Faça aqui sua contribuição!</h1>
         <Link href="/cadastroOcorrencia">

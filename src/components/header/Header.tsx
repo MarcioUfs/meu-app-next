@@ -113,14 +113,14 @@ function Header() {
                     </Link>
 
                     <div className="flex flex-col space-y-2 pt-2 border-t">
-                        <Link href="/login">
+                        <Link href="/">
                         <button className="w-full py-2 text-gray-600 hover:text-blue-600 text-left">
-                            Login
+                            Logout
                         </button>
                         </Link>
-                        <button className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        {/* <button className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                             Sign Up
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>

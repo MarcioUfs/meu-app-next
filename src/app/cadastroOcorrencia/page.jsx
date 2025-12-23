@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "../../components/(navBar)/Navbar";
+import Header from "../../components/header/Header";
 
 export default function CadastroOcorrencia() {
   const [descricao, setDescricao] = useState("");
@@ -64,7 +64,7 @@ export default function CadastroOcorrencia() {
 
   return (
     <div>
-      <Navbar />
+      <Header />
       <div className="justify-center items-baseline-last flex flex-row">
       </div>
       <div className="justify-center items-center flex flex-col min-h-screen p-4">
