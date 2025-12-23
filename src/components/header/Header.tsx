@@ -26,12 +26,12 @@ function Header() {
                         </div>
                         <span className="text-xl font-semibold text-gray-800">
                             <Image
-                                    src="/image/Logo_prefaju.png"
-                                    alt="Brasão"
-                                    // className="h-8 w-8"
-                                    width={150}
-                                    height={38}
-                                />
+                                src="/image/Logo_prefaju.png"
+                                alt="Brasão"
+                                // className="h-8 w-8"
+                                width={150}
+                                height={38}
+                            />
                         </span>
                     </div>
 
@@ -56,9 +56,11 @@ function Header() {
 
                     {/* CTA Buttons - Desktop */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <button className="px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors">
-                            Login
-                        </button>
+                        <Link href="/login">
+                            <button className="px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                                Login
+                            </button>
+                        </Link>
                         <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
                             Sign Up
                         </button>
@@ -111,9 +113,11 @@ function Header() {
                     </Link>
 
                     <div className="flex flex-col space-y-2 pt-2 border-t">
+                        <Link href="/login">
                         <button className="w-full py-2 text-gray-600 hover:text-blue-600 text-left">
                             Login
                         </button>
+                        </Link>
                         <button className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                             Sign Up
                         </button>
