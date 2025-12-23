@@ -11,7 +11,7 @@ export default function Home() {
     router.push("/login");
   };
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="bg-white text-black flex flex-col min-h-screen">
       <Header />
       {/* <div className="justify-center items-center flex flex-col min-h-screen"> */}
       {/* <header className="justify-around items-center flex p-3 bg-amber-200 w-svw"> */}
@@ -36,7 +36,7 @@ export default function Home() {
 
         </button>
       </header>
-      <h1 className="text-center text-gray-200 md:text-2xl lg:text-6xl ">
+      <h1 className="text-center md:text-2xl lg:text-6xl ">
         Aracaju uma nova cidade
       </h1>
       <main className="flex flex-col px-5">
