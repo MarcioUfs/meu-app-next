@@ -1,8 +1,8 @@
 "use Client";
 import Link from "next/link";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/(navBar)/Navbar";
 
-export default function Home() {
+export default function Ocorrencia() {
   return (
     <div>
       <Navbar />
