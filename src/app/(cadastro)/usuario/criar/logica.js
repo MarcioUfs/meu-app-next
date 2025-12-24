@@ -51,6 +51,9 @@ export async function cadastrarUsuario(dados) {
   }
 
   if (senha !== confirmarSenha) {
+    if (senha.length > 16)
+      return { sucesso: false, mensagem: "Senha muito longa" };
+    
     return { sucesso: false, mensagem: "As senhas não conferem." };
   }
 

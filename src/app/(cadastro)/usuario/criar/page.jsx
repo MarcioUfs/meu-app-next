@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { cadastrarUsuario } from "./logica";
-import Header from "../../../components/header/Header";
+import Header from "../../../../components/header/Header";
 
 export default function Formulario() {
   const [form, setForm] = useState({
