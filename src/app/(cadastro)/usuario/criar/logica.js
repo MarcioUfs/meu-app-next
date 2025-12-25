@@ -1,3 +1,4 @@
+import { cadastrarUsuarios } from "./usuarioService";
 export async function cadastrarUsuario(dados) {
   // 1. Verificação de existência dos campos
   const camposObrigatorios = [
@@ -53,7 +54,7 @@ export async function cadastrarUsuario(dados) {
   if (senha !== confirmarSenha) {
     if (senha.length > 16)
       return { sucesso: false, mensagem: "Senha muito longa" };
-    
+
     return { sucesso: false, mensagem: "As senhas não conferem." };
   }
 
@@ -68,9 +69,8 @@ export async function cadastrarUsuario(dados) {
   };
 
   // 6. Simulação de envio ao banco
-  await new Promise((resolve) => setTimeout(resolve, 500));
-
-  console.log("Usuário pronto para persistência:", payloadSeguro);
+  // await new Promise((resolve) => setTimeout(resolve, 500));
+  cadastrarUsuarios(payloadSeguro);
 
   return { sucesso: true };
 }

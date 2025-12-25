@@ -118,7 +118,7 @@ export default function Home() {
                   Login
                 </button>
               </Link>
-              <Link href="/signup">
+              <Link href="/usuario/criar">
                 <button className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                   Sign Up
                 </button>
