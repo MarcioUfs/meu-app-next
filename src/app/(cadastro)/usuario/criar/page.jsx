@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cadastrarUsuario } from "./logica";
+import { useRouter } from "next/navigation";
 import Header from "../../../../components/header/Header";
 import aplicarMascaraCPF from "../../../../functions/aplicaMascaraCPF";
 import aplicarMascaraTelefone from "../../../../functions/aplicarMascaraTelefone";
@@ -17,6 +18,7 @@ export default function Formulario() {
     senha: "",
     confirmarSenha: "",
   });
+  const router = useRouter();
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -40,6 +42,7 @@ export default function Formulario() {
     }
 
     alert("Usuário cadastrado com sucesso!");
+    router.push("/login");
   }
 
   return (
