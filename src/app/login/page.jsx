@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { autenticarUsuario } from "./loginService";
-
+import aplicarMascaraCPF from "../../functions/aplicaMascaraCPF";
+import Link from "next/link";
 export default function Login() {
   const [cpf, setCpf] = useState("");
   const [senha, setSenha] = useState("");
@@ -21,7 +22,16 @@ export default function Login() {
       setErro("Login ou senha inválidos.");
     }
   };
-   
+
+  function handleChange(e) {
+    const { value } = e.target;
+
+    let valorFinal = value;
+
+    valorFinal = aplicarMascaraCPF(value);
+
+    setCpf(valorFinal);
+  }
   return (
     <div className="justify-center items-center flex flex-col min-h-screen">
       <Image
@@ -36,10 +46,11 @@ export default function Login() {
 
       <input
         type="text"
-        placeholder="Login (CPF)"
+        placeholder="CPF"
+        name="cpf"
         className="border p-2 m-2 rounded w-64"
         value={cpf}
-        onChange={(e) => setCpf(e.target.value)}
+        onChange={handleChange}
       />
 
       <input
@@ -56,7 +67,18 @@ export default function Login() {
       >
         Enviar
       </button>
-
+      <div className="flex justify-between w-64 mt-4">
+        <Link href="/">
+          <button className="bg-orange-500 text-white p-2 rounded mt-4 w-24 hover:bg-orange-600">
+            Voltar
+          </button>
+        </Link>
+        <Link href="/usuario/criar">
+          <button className="bg-green-500 text-white p-2 rounded mt-4 w-24 hover:bg-green-600">
+            Sign Up
+          </button>
+        </Link>
+      </div>
       {erro && <p className="text-red-500 mt-4">{erro}</p>}
     </div>
   );
