@@ -18,5 +18,5 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 
- // @@map("tbl_users") // Isso renomeia a tabela no banco de dados
+ @@map("tbl_users") // Isso renomeia a tabela no banco de dados
 }
