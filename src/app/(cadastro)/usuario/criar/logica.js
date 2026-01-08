@@ -66,6 +66,7 @@ export async function cadastrarUsuario(dados) {
     email,
     telefone,
     senha, // futuramente aplicar hash (bcrypt)
+    confirmarSenha 
   };
 
   // 6. Simulação de envio ao banco

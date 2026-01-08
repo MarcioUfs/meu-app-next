@@ -14,6 +14,7 @@ export async function POST(req: Request) {
             email,
             telefone,
             senha,
+            confirmarSenha,
         } = dados;
         /* ===============================
            1. Validações obrigatórias
@@ -25,21 +26,22 @@ export async function POST(req: Request) {
             !cpf ||
             !email ||
             !telefone ||
-            !senha
-            
+            !senha ||
+            !confirmarSenha
+
         ) {
             return NextResponse.json(
-                { sucesso: false, mensagem: "Campos obrigatórios ausentes." },
-                { status: 400 }
+                { status: 400, sucesso: false, mensagem: "Campos obrigatórios ausentes." },
+                // { status: 400 }
             );
         }
 
-        // if (senha !== confirmarSenha) {
-        //     return NextResponse.json(
-        //         { sucesso: false, mensagem: "As senhas não conferem." },
-        //         { status: 400 }
-        //     );
-        // }
+        if (senha !== confirmarSenha) {
+            return NextResponse.json(
+                { status: 400, sucesso: false, mensagem: "As senhas não conferem." },
+                // { status: 400 }
+            );
+        }
 
         /* ===============================
            2. Verificar duplicidade
@@ -53,14 +55,13 @@ export async function POST(req: Request) {
 
         if (usuarioExistente) {
             return NextResponse.json(
-                { sucesso: false, mensagem: "Usuário já cadastrado." },
-                { status: 409 }
+                { status: 409, sucesso: false, mensagem: "Usuário já cadastrado." },
+                // { status: 409 }
             );
         }
-
         /* ===============================
-           3. Hash da senha
-        =============================== */
+                 3. Hash da senha
+              =============================== */
 
         const senhaHash = await bcrypt.hash(senha, 10);
 
@@ -80,14 +81,16 @@ export async function POST(req: Request) {
         });
 
         return NextResponse.json(
-            { sucesso: true, mensagem: "Usuário criado com sucesso." },
-            { status: 201 }
+            { status: 201, sucesso: true, mensagem: "Usuário criado com sucesso." },
+            // { status: 201 }
         );
+
+
     } catch (error) {
         console.error(error);
 
         return NextResponse.json(
-            { sucesso: false, mensagem: "Erro interno no servidor." },
+            { status: 500, sucesso: false, mensagem: "Erro interno no servidor." },
             { status: 500 }
         );
     }

@@ -41,7 +41,7 @@ export default function Formulario() {
       return;
     }
 
-    alert("Usuário cadastrado com sucesso!");
+    alert(resposta.mensagem);
     router.push("/login");
   }
 

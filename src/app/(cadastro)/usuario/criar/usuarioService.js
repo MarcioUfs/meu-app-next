@@ -1,4 +1,4 @@
-export async function cadastrarUsuarios(dados) {
+export async function usuarioService(dados) {
   const response = await fetch("/api/usuarios", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -6,6 +6,5 @@ export async function cadastrarUsuarios(dados) {
   });
 
   const resultado = await response.json();
-
   return resultado;
 }
