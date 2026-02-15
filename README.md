@@ -40,3 +40,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Desligue o npm run dev e faça npx prisma migrate dev --name nome_da_acao
 
+Prisma Studio : npx prisma studio
+
+
